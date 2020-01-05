@@ -17,13 +17,17 @@
         android:textColor="@android:color/black" />
 
     <Button
-        android:id="@+id/button_parse"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:text="parse" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="prikaziOsebe"
+        android:text="Prikazi stranke"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
 </RelativeLayout>
 
