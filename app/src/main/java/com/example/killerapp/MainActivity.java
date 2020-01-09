@@ -11,9 +11,13 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.killerapp.models.Address;
+import com.example.killerapp.models.Client;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -30,6 +34,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 public class MainActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
@@ -43,20 +51,40 @@ public class MainActivity extends AppCompatActivity {
         osebe = (TextView) findViewById(R.id.osebe);
     }
 
+
     private Response.Listener<JSONArray> jsonArrayListener = new Response.Listener<JSONArray>() {
         @Override
         public void onResponse(JSONArray response) {
             ArrayList<String> data = new ArrayList<>();
+            List<Client> clientList = new ArrayList<>();
             for (int i = 0; i < response.length(); i++) {
                 try {
+                    Client client = new Client();
                     JSONObject object = response.getJSONObject(i);
-                    String name = object.getString("name");
-                    String email = object.getString("email");
-//                    String priimek = "xxx";
-//                    String id = object.getString("id");
-//                    String mesto = object.getString("address");
-//                    String naslov = object.getString("email");
-                    data.add(name + ", " + email);
+
+                    client.id = object.getInt("id");
+                    client.name = object.getString("name");
+                    client.type = object.getString("type");
+                    client.registrationNumber = object.getString("registrationNumber");
+                    client.email = object.getString("email");
+                    client.phoneNumber = object.getString("phoneNumber");
+                    client.taxNumber = object.getString("taxNumber");
+                    client.taxPayer = object.getBoolean("taxPayer");
+
+                    Address address = new Address();
+                    address.streetName = object.getString("streetName");
+                    address.streetNumber = object.getString("streetNumber");
+                    address.postNumber = object.getString("postNumber");
+                    address.city = object.getString("city");
+                    address.countryId = object.getInt("countryId");
+                    JSONObject countryObject = object.getJSONObject("country");
+                    address.country = countryObject.getString("countryName");
+
+                    client.address = address;
+                    client.countryId = object.getInt("countryId");
+
+                    clientList.add(client);
+                    data.add(client.name + ", " + client.email);
                 } catch (JSONException e) {
                     e.printStackTrace();
                     return;
