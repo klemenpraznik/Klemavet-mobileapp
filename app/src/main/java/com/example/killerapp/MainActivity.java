@@ -1,6 +1,7 @@
 package com.example.killerapp;
 
-
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -39,9 +40,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+
 public class MainActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
     private TextView osebe;
+    private FloatingActionButton addClientButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +52,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         osebe = (TextView) findViewById(R.id.osebe);
+
+        addClientButton = (FloatingActionButton) findViewById(R.id.addClientButton);
+        addClientButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openClientInsertActivity();
+            }
+        });
     }
 
+    public void openClientInsertActivity() {
+        Intent intent = new Intent(this, insertClientActivity.class);
+        startActivity(intent);
+    }
 
     private Response.Listener<JSONArray> jsonArrayListener = new Response.Listener<JSONArray>() {
         @Override
@@ -99,15 +114,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
     private Response.ErrorListener errorListener = new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
             Log.d("REST error", error.getMessage());
         }
     };
-
-
 
     public void prikaziOsebe(View view) {
         if (view != null) {
@@ -116,5 +128,4 @@ public class MainActivity extends AppCompatActivity {
             requestQueue.add(request);
         }
     }
-
 }
