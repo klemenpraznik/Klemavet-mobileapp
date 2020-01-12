@@ -20,6 +20,7 @@
         <activity android:name=".ClientActivity" />
         <activity
             android:name=".InsertClientActivity"
+            android:parentActivityName=".ClientActivity"
             android:label="@string/new_client" />
         <activity
             android:name=".MainActivity"

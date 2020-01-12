@@ -29,8 +29,9 @@
         android:layout_marginBottom="23dp"
         android:baselineAlignBottom="true"
         android:clickable="true"
-        android:tint="@color/colorWhite"
         android:onClick="openDisplayInsertActivity"
+        android:tint="@color/colorWhite"
+        app:backgroundTint="#009688"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 

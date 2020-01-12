@@ -27,6 +27,7 @@ public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickLis
         this.mImageView = view.findViewById(R.id.imageIv);
         this.mName = view.findViewById(R.id.titleTv);
         this.mMail = view.findViewById(R.id.descriptionTv);
+        this.mPhone = view.findViewById(R.id.phoneTv);
 
         itemView.setOnClickListener(this);
     }

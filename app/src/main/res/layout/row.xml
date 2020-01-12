@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,37 +16,57 @@
         >
 
         <ImageView
+            android:id="@+id/imageIv"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:id="@+id/imageIv"
             android:src="@mipmap/ic_launcher_round"/>
 
         <TextView
+            android:id="@+id/titleTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/titleTv"
-            android:text="Title"
-            android:textSize="22sp"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_toRightOf="@+id/imageIv"
-            android:layout_toEndOf="@+id/imageIv"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp" />
+            android:layout_toEndOf="@+id/imageIv"
+            android:layout_toRightOf="@+id/imageIv"
+            android:text="Ime in priimek"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/descriptionTv"
-            android:text="Description"
-            android:textSize="18sp"
+            android:text="Email"
+            android:linksClickable="true"
+            android:autoLink="email"
+            android:textColorLink="@color/colorGray"
+            android:textSize="15sp"
             android:textColor="#a9a9a9"
             android:layout_toRightOf="@+id/imageIv"
             android:layout_toEndOf="@+id/imageIv"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/titleTv" />
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionTv"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/imageIv"
+            android:layout_toRightOf="@+id/imageIv"
+            android:autoLink="phone"
+            android:linksClickable="true"
+            android:text="Telefonska številka"
+            android:textColorLink="@color/colorGray"
+            android:textColor="#a9a9a9"
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

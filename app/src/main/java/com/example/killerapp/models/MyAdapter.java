@@ -41,16 +41,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         holder.mName.setText(clients.get(position).name);
         holder.mMail.setText(clients.get(position).email);
+        holder.mPhone.setText(clients.get(position).phoneNumber);
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClickListener(View view, int position) {
                 String gTitle = clients.get(position).name;
                 String gMail = clients.get(position).email;
+                String gPhone = clients.get(position).phoneNumber;
 
                 Intent intent = new Intent(c, DisplayClient.class);
                 intent.putExtra("iTitle", gTitle);
                 intent.putExtra("iMail", gMail);
+                intent.putExtra("iPhone", gPhone);
                 c.startActivity(intent);
             }
         });
