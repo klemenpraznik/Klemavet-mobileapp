@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">KillerApp</string>
     <string name="new_client">Nova stranka</string>
+    <string name="clients_title">Stranke</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_display_clients">DisplayClients</string>
 

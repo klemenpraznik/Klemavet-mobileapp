@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
-        openDisplayClientActivity(); //odpre DisplayClient activity
+        openClientActivity(); //odpre DisplayClient activity
 
     }
 
-    public void openDisplayClientActivity() {
-        Intent intent = new Intent(this, DisplayClients.class);
+    public void openClientActivity() {
+        Intent intent = new Intent(this, ClientActivity.class);
         startActivity(intent);
     }
 }

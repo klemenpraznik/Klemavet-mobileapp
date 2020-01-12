@@ -14,14 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
+        <activity android:name=".DisplayClients"></activity>
         <activity
-            android:name=".DisplayClients"
-            android:label="@string/title_activity_display_clients"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:name=".DisplayClient"
+            android:parentActivityName=".ClientActivity" />
+        <activity android:name=".ClientActivity" />
         <activity
             android:name=".InsertClientActivity"
-            android:label="@string/new_client"/>
+            android:label="@string/new_client" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -33,7 +33,5 @@
             </intent-filter>
         </activity>
     </application>
-
-
 
 </manifest>
