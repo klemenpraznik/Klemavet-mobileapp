@@ -106,13 +106,6 @@ public class InsertClientActivity extends AppCompatActivity {
         EditText clientPhoneNumber = findViewById(R.id.clientPhoneNumber);
         EditText clientPostNumber = findViewById(R.id.clientPostNumber);
         CheckBox taxCheckBox = findViewById(R.id.taxCheckBox);
-        Boolean taxPayer;
-        if (taxCheckBox.isChecked()){
-            taxPayer = true;
-        }
-        else {
-            taxPayer = false;
-        }
         Spinner countrySpinner = findViewById(R.id.clientCountry);
         Country country = (Country) countrySpinner.getSelectedItem();
 

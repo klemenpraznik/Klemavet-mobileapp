@@ -14,14 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
+        <activity android:name=".EditClient"
+            android:label="@string/edit_client"
+            android:parentActivityName=".ClientActivity"></activity>
         <activity
             android:name=".DisplayClient"
             android:parentActivityName=".ClientActivity" />
         <activity android:name=".ClientActivity" />
         <activity
             android:name=".InsertClientActivity"
-            android:parentActivityName=".ClientActivity"
-            android:label="@string/new_client" />
+            android:label="@string/new_client"
+            android:parentActivityName=".ClientActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

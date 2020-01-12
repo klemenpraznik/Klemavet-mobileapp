@@ -49,21 +49,33 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
                 String gTitle = clients.get(position).name;
                 String gMail = clients.get(position).email;
                 String gPhone = clients.get(position).phoneNumber;
-                String gAddress = clients.get(position).streetName + " " + clients.get(position).streetNumber + ", " + clients.get(position).postNumber + " " + clients.get(position).city + ", " + clients.get(position).country;
+                String gStreetName = clients.get(position).streetName;
+                String gStreetNumber = clients.get(position).streetNumber;
+                String gPostNumber = clients.get(position).postNumber;
+                String gCity = clients.get(position).city;
+                String gCountry = clients.get(position).country.toString();
+                Integer gCountryId = clients.get(position).countryId;
                 String gTaxNumber = clients.get(position).taxNumber;
                 String gRegistrationNumber = clients.get(position).registrationNumber;
                 String gType = clients.get(position).type;
                 Boolean gTaxPayer = clients.get(position).taxPayer;
+                Integer gClientId = clients.get(position).id;
 
                 Intent intent = new Intent(c, DisplayClient.class);
                 intent.putExtra("iTitle", gTitle);
                 intent.putExtra("iMail", gMail);
                 intent.putExtra("iPhone", gPhone);
-                intent.putExtra("iAddress", gAddress);
+                intent.putExtra("iStreetName", gStreetName);
+                intent.putExtra("iStreetNumber", gStreetNumber);
+                intent.putExtra("iPostNumber", gPostNumber);
+                intent.putExtra("iCity", gCity);
+                intent.putExtra("iCountry", gCountry);
+                intent.putExtra("iCountryId", gCountryId);
                 intent.putExtra("iRegistrationNumber", gRegistrationNumber);
                 intent.putExtra("iTaxNumber", gTaxNumber);
                 intent.putExtra("iType", gType);
                 intent.putExtra("iTaxPayer", gTaxPayer);
+                intent.putExtra("iClientId", gClientId);
 
                 c.startActivity(intent);
             }
