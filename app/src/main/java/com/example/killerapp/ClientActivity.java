@@ -35,6 +35,7 @@ public class ClientActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     MyAdapter myAdapter;
 
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,7 @@ public class ClientActivity extends AppCompatActivity {
 
     }
 
-    public void openDisplayInsertActivity() {
+    public void openDisplayInsertActivity(View v) {
         Intent intent = new Intent(this, InsertClientActivity.class);
         startActivity(intent);
     }
