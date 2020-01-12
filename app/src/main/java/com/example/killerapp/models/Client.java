@@ -19,10 +19,10 @@ public class Client {
     public String phoneNumber;
     public String taxNumber;
     public Boolean taxPayer;
-    private String streetName;
-    private String streetNumber;
-    private String postNumber;
-    private String city;
-    private Country country;
-    private Integer countryId;
+    public String streetName;
+    public String streetNumber;
+    public String postNumber;
+    public String city;
+    public Country country;
+    public Integer countryId;
 }
