@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".DisplayClients"></activity>
         <activity
             android:name=".DisplayClient"
             android:parentActivityName=".ClientActivity" />

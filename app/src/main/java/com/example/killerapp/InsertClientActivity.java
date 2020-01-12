@@ -158,7 +158,7 @@ public class InsertClientActivity extends AppCompatActivity {
     }
 
     public void openDisplayClientActivity() {
-        Intent intent = new Intent(this, DisplayClients.class);
+        Intent intent = new Intent(this, ClientActivity.class);
         startActivity(intent);
     }
 
