@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Country {
     private String countryName;
-    private Integer countryId;
+    public Integer countryId;
 
     @Override
     public String toString() {

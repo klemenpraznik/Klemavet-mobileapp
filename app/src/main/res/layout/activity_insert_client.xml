@@ -40,11 +40,19 @@
 
     <EditText
         android:id="@+id/clientEmail"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/clientTaxNumber"
         android:layout_marginTop="15dp"
         android:hint="Email" />
+
+    <EditText
+        android:id="@+id/clientStreetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clientPhoneNumber"
+        android:layout_marginTop="15dp"
+        android:hint="Ulica" />
 
     <EditText
         android:id="@+id/clientStreetNumber"
@@ -55,6 +63,20 @@
         android:hint="Hišna št" />
 
     <EditText
+        android:id="@+id/clientPostNumber"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clientStreetName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/clientStreetNumber"
+        android:layout_toRightOf="@+id/clientStreetNumber"
+        android:hint="Poštna številka" />
+
+    <EditText
         android:id="@+id/clientCity"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -62,15 +84,32 @@
         android:layout_marginTop="15dp"
         android:hint="Mesto" />
 
-    <EditText
-        android:id="@+id/clientStreetName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/clientEmail"
+    <Spinner
+        android:id="@+id/clientCountry"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/clientPostNumber"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="15dp"
-        android:hint="Ulica" />
+        android:layout_toEndOf="@+id/clientCity"
+        android:layout_toRightOf="@+id/clientCity"
+        android:layout_weight="0.4" />
+
+    <Button
+        android:id="@+id/addClientButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clientCity"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:onClick="addClient"
+        android:text="Dodaj"
+        />
 
     <EditText
         android:id="@+id/clientRegistrationNumber"
@@ -89,32 +128,11 @@
 
     <EditText
         android:id="@+id/clientPhoneNumber"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/clientRegistrationNumber"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_below="@+id/clientEmail"
         android:layout_marginTop="15dp"
-        android:layout_marginRight="58dp"
-        android:layout_toEndOf="@+id/clientEmail"
-        android:layout_toRightOf="@+id/clientEmail"
         android:hint="Telefon" />
-
-    <EditText
-        android:id="@+id/clientPostNumber"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/clientStreetName"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/clientStreetNumber"
-        android:layout_toRightOf="@+id/clientStreetNumber"
-        android:hint="Poštna številka" />
 
     <Spinner
         android:id="@+id/clientType"
@@ -125,23 +143,6 @@
         android:layout_marginTop="15dp"
         android:layout_weight="0.4" />
 
-    <Spinner
-        android:id="@+id/clientCountry"
-        style="@style/Widget.AppCompat.Spinner.Underlined"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
-        android:layout_below="@+id/clientPostNumber"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="79dp"
-        android:layout_toEndOf="@+id/clientCity"
-        android:layout_toRightOf="@+id/clientCity"
-        android:layout_weight="0.4" />
-
     <CheckBox
         android:id="@+id/taxCheckBox"
         android:layout_width="wrap_content"
@@ -149,13 +150,5 @@
         android:layout_below="@+id/clientType"
         android:layout_marginTop="15dp"
         android:text="Davčni zavezanec" />
-
-    <Button
-        android:id="@+id/addClientButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/clientCity"
-        android:layout_marginTop="15dp"
-        android:text="Button" />
 
 </RelativeLayout>
