@@ -63,7 +63,6 @@ public class ClientActivity extends AppCompatActivity {
 
         myAdapter = new MyAdapter(this, getArrayList(clientsList));
         recyclerView.setAdapter(myAdapter);
-
     }
 
     public void openDisplayInsertActivity(View v) {

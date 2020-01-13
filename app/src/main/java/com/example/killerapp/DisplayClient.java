@@ -3,6 +3,7 @@ package com.example.killerapp;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +11,16 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-public class DisplayClient extends AppCompatActivity {
+import java.io.IOException;
 
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
+public class DisplayClient extends AppCompatActivity {
+    private final OkHttpClient httpClient = new OkHttpClient();
     TextView mTitleTv, mDescTv, mTypeTv, mPhoneTv, mAddressTv, mTaxNumberTv, mRegistrationNumberTv;
     ImageView mImageIv;
     RadioButton mTaxPayerTv;
@@ -85,5 +94,20 @@ public class DisplayClient extends AppCompatActivity {
         intent.putExtra("iType", mType);
         intent.putExtra("iTaxPayer", mTaxPayer);
         startActivity(intent);
+    }
+
+    public void deleteClient (View view) throws IOException {
+        openComfirmationDialog();
+
+    }
+
+    public void openDialog(Response response){
+        ResponseErrorDialog responseDialog = new ResponseErrorDialog(response);
+        responseDialog.show(getSupportFragmentManager(), "Response dialog");
+    }
+
+    public void openComfirmationDialog() {
+        DeleteComfirmationDialog deleteDialog = new DeleteComfirmationDialog(clientId, mTitle, this);
+        deleteDialog.show(getSupportFragmentManager(), "Comfirmation dialog");
     }
 }

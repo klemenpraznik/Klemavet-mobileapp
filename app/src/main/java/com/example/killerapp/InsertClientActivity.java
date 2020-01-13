@@ -50,8 +50,6 @@ public class InsertClientActivity extends AppCompatActivity {
         clientTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         clientType.setAdapter(clientTypeAdapter);
 
-
-
         final EditText taxNumber = findViewById(R.id.clientTaxNumber);
         final EditText registrationNumber = findViewById(R.id.clientRegistrationNumber);
 
@@ -93,6 +91,7 @@ public class InsertClientActivity extends AppCompatActivity {
         Spinner countrySpinner = findViewById(R.id.clientCountry);
         countrySpinner.setAdapter(dataAdapter);
     }
+
     public void addClient(View v) throws JSONException, IOException {
         EditText clientName = findViewById(R.id.clientName);
         Spinner clientType = findViewById(R.id.clientType);

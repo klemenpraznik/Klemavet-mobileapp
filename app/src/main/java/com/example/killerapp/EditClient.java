@@ -31,9 +31,9 @@ import okhttp3.Response;
 
 public class EditClient extends AppCompatActivity {
     private Integer clientId;
-
     private final OkHttpClient httpClient = new OkHttpClient();
     public List<Country> countriesList = new ArrayList<>();
+
     //za deklaracijo polj na layoutu
     EditText tName, tSurname, tRegistrationNumber, tEmail, tPhone, tTaxNumber, tStreetName, tStreetNumber, tPostNumber, tCity;
     Spinner tCountry, tType;
@@ -56,20 +56,20 @@ public class EditClient extends AppCompatActivity {
         String tempType = intent.getStringExtra("iType");
         switch (tempType){
             case ("Fizična oseba"):
-                tType.setSelection(0);
-                break;
-            case ("Pravna oseba"):
-                tType.setSelection(1);
-                break;
-            case ("Samostojni podjetnik"):
-                tType.setSelection(2);
-                break;
-            case("Drugo"):
-                tType.setSelection(3);
-                break;
-            default:
-                tType.setSelection(0);
-        }
+        tType.setSelection(0);
+        break;
+        case ("Pravna oseba"):
+        tType.setSelection(1);
+        break;
+        case ("Samostojni podjetnik"):
+        tType.setSelection(2);
+        break;
+        case("Drugo"):
+        tType.setSelection(3);
+        break;
+        default:
+        tType.setSelection(0);
+    }
 
 
         //deklaracija polj
