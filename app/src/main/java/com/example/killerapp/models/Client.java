@@ -1,4 +1,6 @@
 package com.example.killerapp.models;
+import androidx.annotation.NonNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,5 +30,11 @@ public class Client {
 
     public String getAddress(){
         return streetName + " " + streetNumber + ",\n" + postNumber + " " + city;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return name;
     }
 }

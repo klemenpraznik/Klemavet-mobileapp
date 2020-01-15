@@ -7,10 +7,17 @@
     android:orientation="vertical"
     tools:context=".Clients.ClientActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recyclerView"
-        />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/newDocumentRecyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
 
+    <Spinner
+        android:id="@+id/newClientSpinner"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editClientSurname"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.4" />
 </RelativeLayout>

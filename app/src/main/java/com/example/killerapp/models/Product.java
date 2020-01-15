@@ -18,9 +18,9 @@ public class Product {
     private double purchasePrice;
     private double sellingPrice;
     private int warrantyInMonths;
-    private Integer manufacturer;
+    private Manufacturer manufacturer;
     private Integer manufacturerId;
-    private Integer category;
+    private Category category;
     private Integer categoryId;
     private String description;
 }

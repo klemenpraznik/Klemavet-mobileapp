@@ -159,5 +159,7 @@ public class InsertClientActivity extends AppCompatActivity {
         ResponseErrorDialog responseDialog = new ResponseErrorDialog(response);
         responseDialog.show(getSupportFragmentManager(), "Response dialog");
     }
+
+
 }
 
