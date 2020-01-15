@@ -9,13 +9,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.killerapp.R;
+import com.example.killerapp.models.Article;
 import com.example.killerapp.models.Client;
 import com.example.killerapp.models.Document;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -23,6 +26,7 @@ import okhttp3.Request;
 public class DisplayDocument extends AppCompatActivity {
     private final OkHttpClient httpClient = new OkHttpClient();
     private Document document;
+    private List<Article> articleList;
     private Integer clientId, documentId;
     TextView docDetailName, docDetailType, docPhone, docMail, docAddress;
 
@@ -39,7 +43,7 @@ public class DisplayDocument extends AppCompatActivity {
         //podatki iz API-ja
         getDocument(documentId);
         getClient(document.getClientId());
-//        getDocumentArticles(documentId);
+        getDocumentArticles(documentId);
 
         //definirana polja
         setTitle("Račun št.: " + documentId);
@@ -98,19 +102,28 @@ public class DisplayDocument extends AppCompatActivity {
 
     //Bom dokončou samo rabm nov api dt v azure k še nimam updejtane verzije gor
 
-//    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-//    public void getDocumentArticles(Integer documentId){
-//        Request request = new Request.Builder()
-//                .url(getString(R.string.documents) + "/" + documentId)
-//                .build();
-//
-//        try (okhttp3.Response response = httpClient.newCall(request).execute()) {
-//
-//            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-//
-//            document = new ObjectMapper().readValue(response.body().string(), Document.class);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public void getDocumentArticles(Integer documentId){
+        Request request = new Request.Builder()
+                .url(getString(R.string.articles) + "/" + documentId)
+                .build();
+
+        try (okhttp3.Response response = httpClient.newCall(request).execute()) {
+
+            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+
+            Article[] articles = new ObjectMapper().readValue(response.body().string(), Article[].class);
+            articleList = getArrayList(articles);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ArrayList<Article> getArrayList (Article[] clientsList){
+        ArrayList articleArrayList = new ArrayList<Article>();
+        for (Article article : clientsList){
+            articleArrayList.add(article);
+        }
+        return articleArrayList;
+    }
 }
