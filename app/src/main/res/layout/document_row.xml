@@ -68,7 +68,24 @@
             android:textColor="#a9a9a9"
             android:textSize="15sp" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/documentIdDispl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameDispl"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:autoLink="phone"
+            android:linksClickable="true"
+            android:text="Št. rač."
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textColorLink="@color/colorGray"
+            android:textSize="15sp" />
 
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

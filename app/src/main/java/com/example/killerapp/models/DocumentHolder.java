@@ -11,18 +11,18 @@ import com.example.killerapp.R;
 
 import lombok.NonNull;
 
-
-public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    ImageView mImageView;
-    TextView mName, mMail, mPhone;
+public class DocumentHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    ImageView dImageView;
+    TextView dName, dMail, dPhone, dDocId;
     ItemClickListener itemClickListener;
 
-    MyHolder(@NonNull View view){
+    DocumentHolder(@NonNull View view){
         super(view);
-        this.mImageView = view.findViewById(R.id.imageDispl);
-        this.mName = view.findViewById(R.id.nameDispl);
-        this.mMail = view.findViewById(R.id.emailDispl);
-        this.mPhone = view.findViewById(R.id.phoneDispl);
+        this.dImageView = view.findViewById(R.id.imageDispl);
+        this.dName = view.findViewById(R.id.nameDispl);
+        this.dMail = view.findViewById(R.id.emailDispl);
+        this.dPhone = view.findViewById(R.id.phoneDispl);
+        this.dDocId = view.findViewById(R.id.documentIdDispl);
 
         itemView.setOnClickListener(this);
     }

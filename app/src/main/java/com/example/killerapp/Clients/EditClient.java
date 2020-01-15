@@ -1,4 +1,4 @@
-package com.example.killerapp;
+package com.example.killerapp.Clients;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.killerapp.R;
+import com.example.killerapp.Dialogs.ResponseErrorDialog;
 import com.example.killerapp.models.Country;
 
 import org.codehaus.jackson.map.ObjectMapper;

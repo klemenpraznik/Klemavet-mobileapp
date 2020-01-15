@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="#fff"
-    tools:context=".DisplayClient">
+    tools:context=".Clients.DisplayClient">
 
     <ImageView
         android:id="@+id/imageView"
@@ -165,6 +165,6 @@
         android:onClick="deleteClient"
         android:tint="@color/colorWhite"
         app:backgroundTint="@color/colorRed"
-        app:srcCompat="@android:drawable/ic_delete" />
+        app:srcCompat="@android:drawable/ic_menu_delete" />
 
 </RelativeLayout>

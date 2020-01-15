@@ -1,9 +1,8 @@
-package com.example.killerapp;
+package com.example.killerapp.Clients;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +10,13 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.killerapp.Dialogs.DeleteComfirmationDialog;
+import com.example.killerapp.R;
+import com.example.killerapp.Dialogs.ResponseErrorDialog;
+
 import java.io.IOException;
 
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class DisplayClient extends AppCompatActivity {

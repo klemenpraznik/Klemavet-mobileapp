@@ -14,17 +14,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".EditClient"
+        <activity android:name=".Documents.DisplayDocument"
+            android:parentActivityName=".Documents.DocumentActivity"></activity>
+        <activity android:name=".Documents.DocumentActivity" />
+        <activity
+            android:name=".Clients.EditClient"
             android:label="@string/edit_client"
-            android:parentActivityName=".ClientActivity"></activity>
+            android:parentActivityName=".Clients.ClientActivity" />
         <activity
-            android:name=".DisplayClient"
-            android:parentActivityName=".ClientActivity" />
-        <activity android:name=".ClientActivity" />
+            android:name=".Clients.DisplayClient"
+            android:parentActivityName=".Clients.ClientActivity" />
         <activity
-            android:name=".InsertClientActivity"
+            android:name=".Clients.ClientActivity"
+            android:parentActivityName=".Documents.DocumentActivity" />
+        <activity
+            android:name=".Clients.InsertClientActivity"
             android:label="@string/new_client"
-            android:parentActivityName=".ClientActivity" />
+            android:parentActivityName=".Clients.ClientActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

@@ -25,4 +25,8 @@ public class Client {
     public String city;
     public Country country;
     public Integer countryId;
+
+    public String getAddress(){
+        return streetName + " " + streetNumber + ",\n" + postNumber + " " + city;
+    }
 }

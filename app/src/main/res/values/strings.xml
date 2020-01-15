@@ -3,6 +3,7 @@
     <string name="new_client">Nova stranka</string>
     <string name="edit_client">Urejanje stranke</string>
     <string name="clients_title">Stranke</string>
+    <string name="invoice_title">Računi</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_display_clients">DisplayClients</string>
 

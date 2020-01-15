@@ -1,4 +1,4 @@
-package com.example.killerapp;
+package com.example.killerapp.Dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

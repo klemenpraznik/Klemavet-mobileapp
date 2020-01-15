@@ -3,13 +3,12 @@ package com.example.killerapp;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.android.volley.RequestQueue;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.StrictMode;
-import android.widget.TextView;
+
+import com.example.killerapp.Clients.ClientActivity;
+import com.example.killerapp.Documents.DocumentActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,12 +19,19 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        openClientActivity(); //odpre DisplayClient activity
-
+        //openClientActivity(); //odpre DisplayClient activity
+        openInvoiceActivity();
     }
 
     public void openClientActivity() {
         Intent intent = new Intent(this, ClientActivity.class);
         startActivity(intent);
     }
+
+    public void openInvoiceActivity() {
+        Intent intent = new Intent(this, DocumentActivity.class);
+        startActivity(intent);
+    }
+
+
 }

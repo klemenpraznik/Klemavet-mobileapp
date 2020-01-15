@@ -2,6 +2,8 @@
 <resources>
     <string name="countries">https://vodenje-racunov20191204085122.azurewebsites.net/api/country</string>
     <string name="clients">https://vodenje-racunov20191204085122.azurewebsites.net/api/clients</string>
+    <string name="documents">https://vodenje-racunov20191204085122.azurewebsites.net/api/documents</string>
+    <string name="articles">https://vodenje-racunov20191204085122.azurewebsites.net/api/articles</string>
 
 <!--     Drug api -->
 <!--    <string name="countries">https://vodenje-racunov20200113034510.azurewebsites.net/api/Country</string>-->

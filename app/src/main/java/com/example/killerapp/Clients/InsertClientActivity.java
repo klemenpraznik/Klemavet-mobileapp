@@ -1,4 +1,4 @@
-package com.example.killerapp;
+package com.example.killerapp.Clients;
 
 import android.content.Intent;
 import android.os.Build;
@@ -13,6 +13,8 @@ import android.widget.Spinner;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.killerapp.R;
+import com.example.killerapp.Dialogs.ResponseErrorDialog;
 import com.example.killerapp.models.Country;
 
 import org.codehaus.jackson.map.ObjectMapper;
@@ -26,7 +28,6 @@ import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
-import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

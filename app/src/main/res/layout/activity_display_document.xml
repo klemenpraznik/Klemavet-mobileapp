@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#fff"
+    tools:context=".Documents.DisplayDocument">
+
+    <ImageView
+        android:id="@+id/docDetailPic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/docDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toEndOf="@+id/docDetailPic"
+        android:layout_toRightOf="@+id/docDetailPic"
+        android:text="Ime in priimek"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/docDetailType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/docDetailName"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toEndOf="@+id/docDetailPic"
+        android:layout_toRightOf="@+id/docDetailPic"
+        android:text="Tip osebe"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/phoneStatic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/docDetailType"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/docDetailPic"
+        android:layout_toRightOf="@+id/docDetailPic"
+        android:text="Telefon: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/docPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/docDetailType"
+        android:linksClickable="true"
+        android:autoLink="phone"
+        android:textColorLink="@color/colorGray"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/phoneStatic"
+        android:layout_toRightOf="@+id/phoneStatic"
+        android:text="številka"/>
+
+    <TextView
+        android:id="@+id/mailStatic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneStatic"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/docDetailPic"
+        android:layout_toRightOf="@+id/docDetailPic"
+        android:text="Mail: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/docMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneStatic"
+        android:linksClickable="true"
+        android:autoLink="email"
+        android:textColorLink="@color/colorGray"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/mailStatic"
+        android:layout_toRightOf="@+id/mailStatic"
+        android:text="naslov" />
+
+    <TextView
+        android:id="@+id/mailStatic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailStatic"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/docDetailPic"
+        android:layout_toRightOf="@+id/docDetailPic"
+        android:text="Naslov: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/docAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailStatic"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/mailStatic2"
+        android:layout_toRightOf="@+id/mailStatic2"
+        android:text="naslov"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/docAddress"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+
+</RelativeLayout>

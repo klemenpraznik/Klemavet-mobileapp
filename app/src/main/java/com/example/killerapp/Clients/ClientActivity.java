@@ -1,23 +1,18 @@
-package com.example.killerapp;
+package com.example.killerapp.Clients;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.killerapp.R;
 import com.example.killerapp.models.Client;
-import com.example.killerapp.models.Country;
 import com.example.killerapp.models.MyAdapter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
