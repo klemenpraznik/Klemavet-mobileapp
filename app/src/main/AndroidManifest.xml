@@ -14,8 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".Documents.DisplayDocument"
+        <activity android:name=".Documents.NewDocument"
             android:parentActivityName=".Documents.DocumentActivity"></activity>
+        <activity
+            android:name=".Documents.DisplayDocument"
+            android:parentActivityName=".Documents.DocumentActivity" />
         <activity android:name=".Documents.DocumentActivity" />
         <activity
             android:name=".Clients.EditClient"

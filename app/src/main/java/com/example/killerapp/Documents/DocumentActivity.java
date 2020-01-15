@@ -67,6 +67,11 @@ public class DocumentActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openNewDocument(View v){
+        Intent intent = new Intent(this, NewDocument.class);
+        startActivity(intent);
+    }
+
     public ArrayList<Document> getArrayList (List<Document> documentsList){
         ArrayList documentArrayList = new ArrayList<Document>();
         for (Document document : documentsList){
