@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imageDispl"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@android:drawable/checkbox_off_background" />
+
+        <TextView
+            android:id="@+id/articleName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/imageDispl"
+            android:layout_toRightOf="@+id/imageDispl"
+            android:text="Izdelek"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/articleDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/articleName"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/imageDispl"
+            android:layout_toRightOf="@+id/imageDispl"
+            android:text="Opis"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/articleQuantity"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/articlePrice"
+            android:layout_toLeftOf="@+id/articlePrice"
+            android:text="Qty" />
+
+        <TextView
+            android:id="@+id/articlePrice"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toStartOf="@+id/articleDiscount"
+            android:layout_toLeftOf="@+id/articleDiscount"
+            android:text="Cena" />
+
+        <TextView
+            android:id="@+id/articleDiscount"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Pop" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/articleVAT"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toEndOf="@+id/articleDiscount"-->
+<!--            android:layout_toRightOf="@+id/articleDiscount"-->
+<!--            android:text="ddv" />-->
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

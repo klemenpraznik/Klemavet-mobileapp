@@ -45,7 +45,7 @@ public class NewDocument extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         Spinner clientSpinner = findViewById(R.id.newClientSpinner );
-        clientSpinner.setAdapter(dataAdapter); //ZA IZPIS V DROPDOWNU MORE MET CLASS FUNCKIJO TOSTING()!!!!!!!!!!!!!!!!!!!!!!!!!!
+        clientSpinner.setAdapter(dataAdapter);
 
     }
 

@@ -1,131 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#fff"
-    tools:context=".Documents.DisplayDocument">
-
-    <ImageView
-        android:id="@+id/docDetailPic"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="2dp"
-        android:src="@mipmap/ic_launcher_round" />
-
-    <TextView
-        android:id="@+id/docDetailName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_toEndOf="@+id/docDetailPic"
-        android:layout_toRightOf="@+id/docDetailPic"
-        android:text="Ime in priimek"
-        android:textSize="20dp"
-        android:textColor="#000"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/docDetailType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/docDetailName"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_toEndOf="@+id/docDetailPic"
-        android:layout_toRightOf="@+id/docDetailPic"
-        android:text="Tip osebe"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/phoneStatic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/docDetailType"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/docDetailPic"
-        android:layout_toRightOf="@+id/docDetailPic"
-        android:text="Telefon: "
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/docPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/docDetailType"
-        android:linksClickable="true"
-        android:autoLink="phone"
-        android:textColorLink="@color/colorGray"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/phoneStatic"
-        android:layout_toRightOf="@+id/phoneStatic"
-        android:text="številka"/>
-
-    <TextView
-        android:id="@+id/mailStatic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/phoneStatic"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/docDetailPic"
-        android:layout_toRightOf="@+id/docDetailPic"
-        android:text="Mail: "
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/docMail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/phoneStatic"
-        android:linksClickable="true"
-        android:autoLink="email"
-        android:textColorLink="@color/colorGray"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/mailStatic"
-        android:layout_toRightOf="@+id/mailStatic"
-        android:text="naslov" />
-
-    <TextView
-        android:id="@+id/mailStatic2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mailStatic"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/docDetailPic"
-        android:layout_toRightOf="@+id/docDetailPic"
-        android:text="Naslov: "
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/docAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mailStatic"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/mailStatic2"
-        android:layout_toRightOf="@+id/mailStatic2"
-        android:text="naslov"/>
-
-    <View
-        android:id="@+id/line"
+    android:fillViewport="true">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/docAddress"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#fff"
+        tools:context=".Documents.DisplayDocument">
 
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/docDetailPic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/docDetailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/docDetailPic"
+            android:layout_toRightOf="@+id/docDetailPic"
+            android:text="Ime in priimek"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/docDetailType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docDetailName"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/docDetailPic"
+            android:layout_toRightOf="@+id/docDetailPic"
+            android:text="Tip osebe"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/phoneStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docDetailType"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/docDetailPic"
+            android:layout_toRightOf="@+id/docDetailPic"
+            android:text="Telefon: "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/docPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docDetailType"
+            android:linksClickable="true"
+            android:autoLink="phone"
+            android:textColorLink="@color/colorGray"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/phoneStatic"
+            android:layout_toRightOf="@+id/phoneStatic"
+            android:text="številka"/>
+
+        <TextView
+            android:id="@+id/mailStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneStatic"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/docDetailPic"
+            android:layout_toRightOf="@+id/docDetailPic"
+            android:text="Mail: "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/docMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneStatic"
+            android:linksClickable="true"
+            android:autoLink="email"
+            android:textColorLink="@color/colorGray"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/mailStatic"
+            android:layout_toRightOf="@+id/mailStatic"
+            android:text="naslov" />
+
+        <TextView
+            android:id="@+id/mailStatic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mailStatic"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/docDetailPic"
+            android:layout_toRightOf="@+id/docDetailPic"
+            android:text="Naslov: "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/docAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mailStatic"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/mailStatic2"
+            android:layout_toRightOf="@+id/mailStatic2"
+            android:text="naslov"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/docAddress"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/displayArticles"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="10dp"
+            app:fastScrollEnabled="false" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Izdelek"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Popust"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_toStartOf="@+id/textView2"
+            android:layout_toLeftOf="@+id/textView2"
+            android:text="Cena"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_toStartOf="@+id/textView3"
+            android:layout_toLeftOf="@+id/textView3"
+            android:text="QTY"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/documentPrice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:text="cena brez ddv" />
+
+        <TextView
+            android:id="@+id/documentDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/documentPrice1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="popust" />
+
+        <TextView
+            android:id="@+id/documentAmountWithoutVat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/documentDiscount"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="Znesek brez DDV" />
+
+        <TextView
+            android:id="@+id/documentAmountIncludingVat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/documentAmountWithoutVat"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="Znesek z DDV"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayArticles"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:progressTint="@color/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/paidAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:text="placano"
+            android:textSize="12dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>
