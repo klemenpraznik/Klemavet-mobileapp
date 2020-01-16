@@ -19,7 +19,7 @@
             android:id="@+id/imageDispl"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:src="@mipmap/ic_launcher_round"/>
+            android:src="@drawable/ic_account_circle_black_24dp" />
 
         <TextView
             android:id="@+id/nameDispl"
